@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AppSidebar } from "@/components/layouts/app-sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import Header from "@/components/layouts/header";
 
 export const metadata: Metadata = {
   title: "Learning Next.js",
@@ -13,7 +16,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <SidebarProvider
+          style={
+            {
+              "--header-height": "calc(var(--spacing) * 12)",
+            } as React.CSSProperties
+          }
+        >
+          <AppSidebar />
+          <SidebarInset>
+            <Header />
+            <main className="p-4">{children}</main>
+          </SidebarInset>
+        </SidebarProvider>
+      </body>
     </html>
   );
 }
