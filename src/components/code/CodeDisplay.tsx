@@ -1,3 +1,4 @@
+"use client";
 import Editor from "@monaco-editor/react";
 import { ReactNode, useState } from "react";
 

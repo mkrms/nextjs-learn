@@ -1,4 +1,4 @@
-import { Activity, Home } from "lucide-react";
+import { Activity, Home, Lock, Unlock, User } from "lucide-react";
 
 import {
   Sidebar,
@@ -18,14 +18,24 @@ const items = [
     url: "/",
     icon: Home,
   },
+  {
+    title: "Profile",
+    url: "/profile",
+    icon: User,
+  },
+  {
+    title: "NextAuth - credential",
+    url: "/nextauth",
+    icon: Lock,
+  },
 ];
 
-export function AppSidebar() {
+export const AppSidebar = () => {
   return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Base Knowledge</SidebarGroupLabel>
+          <SidebarGroupLabel>Next Auth & Prisma</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -44,4 +54,4 @@ export function AppSidebar() {
       </SidebarContent>
     </Sidebar>
   );
-}
+};

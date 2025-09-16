@@ -11,7 +11,7 @@ import {
 import { usePathname } from "next/navigation";
 import { Separator } from "../ui/separator";
 
-export default function Header() {
+export const Header = () => {
   const paths = usePathname().substring(1).split("/");
 
   const roots = [""];
@@ -45,4 +45,4 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
