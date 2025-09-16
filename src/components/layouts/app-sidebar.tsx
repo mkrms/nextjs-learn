@@ -18,11 +18,6 @@ const items = [
     url: "/",
     icon: Home,
   },
-  {
-    title: "hooks",
-    url: "/hooks",
-    icon: Activity,
-  },
 ];
 
 export function AppSidebar() {
